@@ -1,6 +1,5 @@
 const express = require("express");
 const api = require("./api");
-const favicon = require("express-favicon");
 const bodyParser = require("body-parser");
 const path = require("path");
 const port = process.env.PORT || 5000;
