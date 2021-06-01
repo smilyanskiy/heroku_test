@@ -1,7 +1,7 @@
 const express = require("express");
 const api = require("./api");
 const bodyParser = require("body-parser");
-const path = require("path");
+// const path = require("path");
 const port = process.env.PORT || 5000;
 
 const app = express();
@@ -13,11 +13,11 @@ app.use(bodyParser.json());
 app.use("/api", api);
 
 // added static files form build package
-app.use(express.static(path.join(__dirname, "../")));
-app.use(express.static(path.join(__dirname, "../build")));
-app.get("/*", function (req, res) {
-  res.sendFile(path.join(__dirname, "../build", "index.html"));
-});
+// app.use(express.static(path.join(__dirname, "../")));
+// app.use(express.static(path.join(__dirname, "../build")));
+// app.get("/*", function (req, res) {
+//   res.sendFile(path.join(__dirname, "../build", "index.html"));
+// });
 
 app.listen(port, function (err) {
   if (err) {
