@@ -1,7 +1,6 @@
 {
   "name": "simple_api",
   "version": "0.0.1",
-  "proxy": "http://localhost:5000/",
   "description": "core",
   "scripts": {
     "start": "node server.js"
