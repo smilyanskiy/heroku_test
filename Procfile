@@ -1,1 +1,1 @@
-web: node simple_api/server.js
+worker: node simple_api/server.js
