@@ -1,1 +1,1 @@
-web: node server.js
+web: node simple_api/server.js
