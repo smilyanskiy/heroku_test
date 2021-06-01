@@ -15,7 +15,6 @@ app.use(bodyParser.json());
 app.use("/api", api);
 
 // added static files form build package
-app.use(favicon(__dirname + "../build/favicon.png"));
 app.use(express.static(path.join(__dirname, "../")));
 app.use(express.static(path.join(__dirname, "../build")));
 app.get("/*", function (req, res) {
