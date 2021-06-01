@@ -1,5 +1,6 @@
 const express = require("express");
 const api = require("./api");
+const favicon = require("express-favicon");
 const bodyParser = require("body-parser");
 const path = require("path");
 const port = process.env.PORT || 5000;
@@ -14,6 +15,7 @@ app.use(bodyParser.json());
 app.use("/api", api);
 
 // added static files form build package
+app.use(favicon(__dirname + "../build/favicon.png"));
 app.use(express.static(path.join(__dirname, "../")));
 app.use(express.static(path.join(__dirname, "../build")));
 app.get("/*", function (req, res) {
